@@ -116,8 +116,8 @@ class Maze:
     def _reset_cells_visited(self):
         for col in self._cells:
             for cell in col:
-                cell.cisited = False
-    
+                cell.visited = False
+
     # returns True if this is the end cell, OR if it leads to the end cell.
     # returns False if this is a loser cell.
     def _solve_r(self, i, j):
@@ -184,6 +184,3 @@ class Maze:
     # create the moves for the solution using a depth first search
     def solve(self):
         return self._solve_r(0, 0)
-
-
-
